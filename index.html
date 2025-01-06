@@ -2,23 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Telegram Web App</title>
     <style>
+        /* Prevent text selection */
+        * {
+            user-select: none;
+        }
+
+        /* Prevent scrolling */
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             margin-top: 50px;
+            background-color: #f0f0f0;
         }
+
+        h1 {
+            font-size: 2rem;
+            color: #333;
+            animation: fadeIn 2s ease-out;
+        }
+
         button {
             padding: 10px 20px;
             font-size: 18px;
             cursor: pointer;
+            background-color: #0088cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            animation: buttonAnimation 0.5s ease-out;
+        }
+
+        button:hover {
+            background-color: #006699;
+        }
+
+        /* Fade-in animation for h1 */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Button hover effect */
+        @keyframes buttonAnimation {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
         }
     </style>
 </head>
 <body>
-    <h1>11111111111111111111111111111</h1>
+    <h1>WELCOME TO DIVINE LANKAN BEAUTIES </h1>
     <button id="openChannel">Visit Our Telegram Channel</button>
     <script>
         document.getElementById('openChannel').addEventListener('click', () => {
